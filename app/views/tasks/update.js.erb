@@ -1,0 +1,7 @@
+console.log("IN UPDATE");
+
+<% if @task.complete? %>
+  $('#complete_tasks').append($("#edit_task_<%= @task.id %>"));
+<% else %>
+  $('#incomplete_tasks').append($("#edit_task_<%= @task.id %>"));
+<% end %>
